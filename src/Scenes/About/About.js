@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
+import anime from 'animejs';
 
 import Favorites from './Favorites';
 import './About.css';
 import me from '../../me';
 
 class About extends Component {
+  componentDidMount() {
+    anime({
+      targets: '.about-wrapper',
+      opacity: [0,1],
+      duration: 1100,
+      delay: 250,
+      easing: 'easeOutCubic'
+    });
+  }
+
   render() {
     const work = [];
     me.work.forEach(function(w) {
