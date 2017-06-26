@@ -1,0 +1,57 @@
+.about-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+.about-wrapper .about-header h1 {
+	text-align: left;
+	font-size: 2em;
+}
+
+.about-wrapper h3 {
+	font-size: 1.4em;
+	line-height: 2em;
+}
+
+.about-wrapper .about-body {
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+}
+
+.about-wrapper .about-body .about-col-left {
+	margin-right: 40px;
+	width: 65%;
+}
+
+.about-wrapper .about-body .about-col-right {
+	margin-right: 0px;
+	width: 35%;
+}
+
+.about-wrapper .about-body .about-intro p {
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.about-wrapper .about-body .about-work {
+	margin-top: 40px;
+}
+
+.about-wrapper .about-body .about-work ul {
+	padding-left: 0px;
+}
+
+.about-wrapper .about-body .about-work ul li {
+	list-style: none;
+}
+
+.about-wrapper .about-body .about-work ul li p {
+	margin-bottom: 8px;
+}
+
+.about-wrapper .favorites {
+	white-space: pre;
+}

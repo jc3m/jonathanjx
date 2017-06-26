@@ -7,7 +7,7 @@ import './Navigation.css';
 const navLinks = [
   { title: 'Home', to: '/' },
   { title: 'About', to: '/about' },
-  { title: 'Portfolio', to: '#' }
+  { title: 'Portfolio', to: '/portfolio' }
 ];
 
 class Navigation extends Component {

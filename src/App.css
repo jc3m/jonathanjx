@@ -1,5 +1,17 @@
+html, body, #root, .App {
+	height: 100%;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .main-view {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -7,5 +19,5 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: 'Cabin', serif;
+	font-family: 'Roboto', serif;
 }

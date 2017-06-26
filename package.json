@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animejs": "^2.0.2",
+    "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
     "react": "^15.6.0",
