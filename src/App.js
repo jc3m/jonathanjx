@@ -9,15 +9,36 @@ import Portfolio from './Scenes/Portfolio/Portfolio';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    // Can't put this on state since changing causes a re-render and will
+    // deadlock if you switch pages.
+    this._visited = {
+      root: false,
+      about: false,
+      portfolio: false
+    }
+
+    this.setVisited = this.setVisited.bind(this);
+  }
+
+  setVisited(page) {
+    this._visited[page] = true;
+  }
+
   render() {
     return (
       <div className="App">
         <Navigation />
 
         <div className="main-view">
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/portfolio" component={Portfolio} />
+          <Route exact path="/" component={
+            (props) => <Home visited={this._visited.root} visit={this.setVisited} /> } />
+          <Route path="/about" component={
+            (props) => <About visited={this._visited.about} visit={this.setVisited} /> } />
+          <Route path="/portfolio" component={
+            (props) => <Portfolio visited={this._visited.portfolio} visit={this.setVisited} /> }/>
         </div>
       </div>
     );

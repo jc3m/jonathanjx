@@ -30,7 +30,7 @@ const favs = {
   Artists: ["Boston", "Styx", "Coldplay", "Muse"],
   Songs: ["More Than a Feeling", "Come Sail Away", "Tiny Dancer"],
   Shows: ["How I Met Your Mother", "The Office", "House of Cards"],
-  Movies: ["Inception", "Almost Famous", "Full Metal Jacket", "The Social Network"],
+  Movies: ["Inception", "Almost Famous", "The Social Network"],
   Books: ["Outliers", "The Kite Runner", "Ready Player One"]
 }
 
@@ -59,7 +59,7 @@ class Favorites extends Component {
     const favorites = (
       <div className="favorites" style={f}>
           <p><span style={d}>let</span> favorites <span style={e}>=</span> {'{'} </p>
-            <div style={{ marginLeft: '1.8em', whiteSpace: 'normal' }}>
+            <div id="kv-block" style={{ marginLeft: '1.8em', whiteSpace: 'normal' }}>
               {keys}
             </div>
           <p>{'};'}</p>

@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 class Portfolio extends Component {
   componentDidMount() {
-    console.log(this.props);
+    if (this.props.visited)
+      return;
+  }
+
+  componentWillUnmount() {
+    this.props.visit('portfolio');
   }
 
   render() {

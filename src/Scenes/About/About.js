@@ -7,13 +7,28 @@ import me from '../../me';
 
 class About extends Component {
   componentDidMount() {
-    anime({
-      targets: '.about-wrapper',
-      opacity: [0,1],
-      duration: 1100,
-      delay: 250,
-      easing: 'easeOutCubic'
-    });
+    if (this.props.visited) {
+      anime({
+        targets: '.about-wrapper',
+        opacity: [0,1],
+        duration: 800,
+        delay: 0,
+        easing: 'easeInOutQuad'
+      });
+    }
+    else {
+      anime({
+        targets: '.about-wrapper',
+        opacity: [0,1],
+        duration: 1100,
+        delay: 350,
+        easing: 'easeOutQuad'
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this.props.visit('root');
   }
 
   render() {

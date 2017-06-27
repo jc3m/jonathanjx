@@ -6,6 +6,10 @@ import letters from './Letters.js';
 
 class Home extends Component {
   componentDidMount() {
+    if (this.props.visited)
+      // Prevent re-animating
+      return;
+
     const timeline = anime.timeline({
       loop: false,
       autoplay: true
@@ -44,6 +48,10 @@ class Home extends Component {
         easing: 'easeOutCubic'
       })
       .add({});
+  }
+
+  componentWillUnmount() {
+    this.props.visit('root');
   }
 
   render() {
