@@ -20,8 +20,8 @@ class About extends Component {
       anime({
         targets: '.about-wrapper',
         opacity: [0,1],
-        duration: 1100,
-        delay: 350,
+        duration: 900,
+        delay: 200,
         easing: 'easeOutQuad'
       });
     }
