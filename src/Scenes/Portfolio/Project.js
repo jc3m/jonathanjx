@@ -37,13 +37,13 @@ class Project extends Component {
   }
 
   render() {
-    const side = '265px';
+    const side = 285;
     const projectStyle = {
-      width: side,
-      height: side,
-      margin: '10px',
+      width: side + 2,
+      height: side + 2,
+      margin: '22px',
       display: 'inline-block',
-      border: '1px solid #bbb',
+      border: '1px solid #ddd',
       position: 'relative'
     };
     const imgStyle = {
