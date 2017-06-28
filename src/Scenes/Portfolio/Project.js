@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 // Using a css file for the :hover selector
 import './visitButton.css';
 
-class Project extends Component {
-  constructor(props) {
-    super(props);
-    this.imageEnter = this.imageEnter.bind(this);
-    this.imageLeave = this.imageLeave.bind(this);
-  }
+const HEADER_OFFSET = '-18px';
+const BUTTON_OFFSET = '32px';
 
+class Project extends Component {
   imageEnter(e) {
+    $(".item-in", e.currentTarget).stop(true);
+    $("h3", e.currentTarget).stop(true);
+    $(".visitButton", e.currentTarget).stop(true);
+
+    $(".item-in", e.currentTarget).fadeTo(300, 1.0);
+    $("h3", e.currentTarget).animate({
+      top: "0px"
+    }, 320);
+    $(".visitButton", e.currentTarget).animate({
+      top: "0px"
+    }, 320);
   }
 
   imageLeave(e) {
+    $(".item-in", e.currentTarget).stop(true);
+    $("h3", e.currentTarget).stop(true);
+    $(".visitButton", e.currentTarget).stop(true);
+
+    $(".item-in", e.currentTarget).fadeTo(300, 0.0);
+    $("h3", e.currentTarget).animate({
+      top: HEADER_OFFSET
+    }, 320);
+    $(".visitButton", e.currentTarget).animate({
+      top: BUTTON_OFFSET
+    }, 320);
   }
 
   render() {
@@ -38,19 +58,22 @@ class Project extends Component {
       left: 0,
       width: side,
       zIndex: 1,
-      backgroundColor: 'rgba(0,0,0,0.71)'
+      backgroundColor: 'rgba(0,0,0,0.71)',
+      opacity: 0
     };
     const nameStyle = {
       color: 'white',
       marginTop: 85,
-      position: 'relative'
+      position: 'relative',
+      top: HEADER_OFFSET
     };
     const buttonStyle = {
       display: 'inline-block',
       margin: 'auto',
       marginTop: 10,
       border: '2px solid white',
-      position: 'relative'
+      position: 'relative',
+      top: BUTTON_OFFSET
     };
     const linkStyle = {
       padding: '8px 20px',
