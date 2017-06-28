@@ -43,6 +43,18 @@ class About extends Component {
       );
     });
 
+    const social = [];
+    me.social.forEach(function(s) {
+      social.push(
+        <li key={s.platform}>
+          <p>
+            <i className={`fa fa-${s.fa}`} aria-hidden="true" style={{ marginRight: '7px' }}></i> 
+            <a href={s.link} target="_blank" rel="noopener noreferrer">{s.platform + ' '}</a>
+          </p>
+        </li>
+      );
+    });
+
     return(
       <div className="about-wrapper container">
         <div className="about-header">
@@ -61,6 +73,13 @@ class About extends Component {
               <h3>Work Experience</h3>
               <ul>
                 { work }
+              </ul>
+            </div>
+
+            <div className="about-social">
+              <h3>Social</h3>
+              <ul>
+                { social }
               </ul>
             </div>
           </div>

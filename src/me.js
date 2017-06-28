@@ -1,10 +1,19 @@
 const me = {
   name: 'Jonathan Xu',
-  social: {
-    github: {
-      handle: 'jc3m'
+  social: [
+    {
+      platform: 'Github',
+      handle: 'jc3m',
+      link: 'https://github.com/jc3m',
+      fa: 'github'
+    },
+    {
+      platform: 'LinkedIn',
+      handle: 'jonathanjxu',
+      link: 'https://www.linkedin.com/in/jonathanjxu/',
+      fa: 'linkedin'
     }
-  },
+  ],
   about: 'I\'m Jonathan Xu, an undergraduate at the University of Illinois at ' +
           'Urbana-Champaign studying Computer Engineering. I love learning about ' +
           'and exploring everything there is to know about computers whether it\'s ' +

@@ -37,20 +37,27 @@
 	line-height: 1.5em;
 }
 
-.about-wrapper .about-body .about-work {
+.about-wrapper .about-body .about-work,
+.about-wrapper .about-body .about-social {
 	margin-top: 40px;
 }
 
-.about-wrapper .about-body .about-work ul {
+.about-wrapper .about-body .about-work ul,
+.about-wrapper .about-body .about-social ul {
 	padding-left: 0px;
 }
 
-.about-wrapper .about-body .about-work ul li {
+.about-wrapper .about-body .about-work ul li,
+.about-wrapper .about-body .about-social ul li {
 	list-style: none;
 }
 
 .about-wrapper .about-body .about-work ul li p {
 	margin-bottom: 8px;
+}
+
+.about-wrapper .about-body .about-social ul li p {
+	margin-bottom: 2px;
 }
 
 .about-wrapper .favorites {
