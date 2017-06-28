@@ -48,7 +48,7 @@ class About extends Component {
       social.push(
         <li key={s.platform}>
           <p>
-            <i className={`fa fa-${s.fa}`} aria-hidden="true" style={{ marginRight: '7px' }}></i> 
+            <i className={`fa fa-${s.fa}`} aria-hidden="true" style={{ width: '24px' }}></i> 
             <a href={s.link} target="_blank" rel="noopener noreferrer">{s.platform + ' '}</a>
           </p>
         </li>

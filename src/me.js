@@ -12,6 +12,12 @@ const me = {
       handle: 'jonathanjxu',
       link: 'https://www.linkedin.com/in/jonathanjxu/',
       fa: 'linkedin'
+    },
+    {
+      platform: 'jonathanj.xu97@gmail.com',
+      handle: '',
+      link: 'mailto:jonathanj.xu97@gmail.com',
+      fa: 'envelope-o'
     }
   ],
   about: 'I\'m Jonathan Xu, an undergraduate at the University of Illinois at ' +
