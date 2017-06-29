@@ -55,6 +55,18 @@ class About extends Component {
       );
     });
 
+    // Resume
+    social.push(
+      <li key='resume'>
+        <p>
+            <i className={`fa fa-file-text`} aria-hidden="true" style={{ width: '24px' }}></i> 
+            <a href={require('./JonathanXu-Resume.pdf')}
+              target="_blank"
+              rel="noopener noreferrer">{'Resume '}</a>
+          </p>
+      </li>
+    );
+
     return(
       <div className="about-wrapper container">
         <div className="about-header">
