@@ -1,3 +1,5 @@
+
+
 .about-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -12,7 +14,7 @@
 
 .about-wrapper h3 {
 	font-size: 1.4em;
-	line-height: 2em;
+	line-height: 1.5em;
 }
 
 .about-wrapper .about-body {
@@ -38,17 +40,17 @@
 }
 
 .about-wrapper .about-body .about-work,
-.about-wrapper .about-body .about-social {
+.about-wrapper .about-body .about-connect {
 	margin-top: 40px;
 }
 
 .about-wrapper .about-body .about-work ul,
-.about-wrapper .about-body .about-social ul {
+.about-wrapper .about-body .about-connect ul {
 	padding-left: 0px;
 }
 
 .about-wrapper .about-body .about-work ul li,
-.about-wrapper .about-body .about-social ul li {
+.about-wrapper .about-body .about-connect ul li {
 	list-style: none;
 }
 
@@ -56,8 +58,8 @@
 	margin-bottom: 8px;
 }
 
-.about-wrapper .about-body .about-social ul li p {
-	margin-bottom: 2px;
+.about-wrapper .about-body .about-connect ul li p {
+	margin-bottom: 4px;
 }
 
 .about-wrapper .favorites {

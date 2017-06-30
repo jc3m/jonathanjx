@@ -43,9 +43,9 @@ class About extends Component {
       );
     });
 
-    const social = [];
+    const connect = [];
     me.social.forEach(function(s) {
-      social.push(
+      connect.push(
         <li key={s.platform}>
           <p>
             <i className={`fa fa-${s.fa}`} aria-hidden="true" style={{ width: '24px' }}></i> 
@@ -56,7 +56,7 @@ class About extends Component {
     });
 
     // Resume
-    social.push(
+    connect.push(
       <li key='resume'>
         <p>
             <i className={`fa fa-file-text`} aria-hidden="true" style={{ width: '24px' }}></i> 
@@ -88,10 +88,10 @@ class About extends Component {
               </ul>
             </div>
 
-            <div className="about-social">
-              <h3>Social</h3>
+            <div className="about-connect">
+              <h3>Connect</h3>
               <ul>
-                { social }
+                { connect }
               </ul>
             </div>
           </div>
