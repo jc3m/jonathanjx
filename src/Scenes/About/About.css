@@ -33,6 +33,17 @@
 	width: 35%;
 }
 
+@media (max-width: 770px) {
+	.about-wrapper .about-body .about-col-left {
+		margin-right: 0px;
+		width: 100%;
+	}
+
+	.about-wrapper .about-body .about-col-right {
+		display: none;
+	}
+}
+
 .about-wrapper .about-body .about-intro p {
 	font-weight: 300;
 	font-size: 1em;
