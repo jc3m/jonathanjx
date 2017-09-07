@@ -1,0 +1,14 @@
+.media-wrapper {
+	margin-top: 15px;
+}
+
+.media-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.media-list ul li {
+    font-size: 14px;
+    list-style: none;
+}
+

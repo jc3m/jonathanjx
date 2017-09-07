@@ -44,11 +44,12 @@ class About extends Component {
     });
 
     const connect = [];
-    me.social.forEach(function(s) {
+    me.social.forEach((s) => {
+      const faClass = `fa fa-${s.fa}`;
       connect.push(
         <li key={s.platform}>
           <p>
-            <i className={`fa fa-${s.fa}`} aria-hidden="true" style={{ width: '24px' }}></i> 
+            <i className={faClass} aria-hidden="true" style={{ width: '24px' }}></i> 
             <a href={s.link} target="_blank" rel="noopener noreferrer">{s.platform + ' '}</a>
           </p>
         </li>

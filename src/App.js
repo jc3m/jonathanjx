@@ -7,6 +7,7 @@ import Navigation from './Components/nav/Navigation';
 import Home from './Scenes/Home/Home';
 import About from './Scenes/About/About';
 import Portfolio from './Scenes/Portfolio/Portfolio';
+import Media from './Scenes/Media';
 import './App.css';
 
 class App extends Component {
@@ -40,6 +41,7 @@ class App extends Component {
             (props) => <About visited={this._visited.about} visit={this.setVisited} /> } />
           <Route path="/portfolio" component={
             (props) => <Portfolio visited={this._visited.portfolio} visit={this.setVisited} /> }/>
+          <Route path="/m" component={Media} />
         </div>
       </div>
     );
@@ -47,3 +49,4 @@ class App extends Component {
 }
 
 export default App;
+
