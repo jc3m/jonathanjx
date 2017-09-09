@@ -6,7 +6,7 @@ class Media extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      keys: [],
+      docs: [],
       prefix: ''
     };
   }
@@ -16,20 +16,55 @@ class Media extends Component {
       return response.json();
     }).then((json) => {
       this.setState({
-        keys: json.keys,
-        prefix: json.prefix
+        docs: json.docs,
+        prefix: json.s3Prefix
       });
     });
   }
 
   render() {
-    const links = [];
-    this.state.keys.forEach((d) => {
-      const ref = `http://${this.state.prefix}/${d}`;
-      links.push(
-        <li key={d}>
-          <a href={ref}>{d}</a>
-        </li>
+    const types = {}; // Maps type to an array of links
+    const sections = [];
+
+    this.state.docs.forEach((d) => {
+      const ref = `http://${this.state.prefix}/${d.s3_key}`;
+      if (types[d.type] === undefined) {
+        types[d.type] = [];
+      }
+      types[d.type].push({
+        name: d.name,
+        ref
+      });
+    });
+
+    const typeKeys = Object.keys(types);
+    typeKeys.sort();
+
+    typeKeys.forEach((k) => {
+      types[k].sort((a, b) => {
+        if (a.name > b.name)
+          return 1;
+        if (a.name < b.name)
+          return -1;
+        return 0;
+      });
+
+      const anchors = [];
+      types[k].forEach((d) => {
+        anchors.push(
+          <li key={d.ref}>
+            <a href={d.ref}>{d.name}</a>
+          </li>
+        );
+      });
+
+      sections.push(
+        <div key={k}>
+          <h4>{k}</h4>
+          <ul className="link-list">
+            {anchors}
+          </ul>
+        </div>
       );
     });
 
@@ -40,9 +75,7 @@ class Media extends Component {
         </div>
 
         <div className="media-list">
-          <ul>
-            {links}
-          </ul>
+          {sections}
         </div>
       </div>
     );

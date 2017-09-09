@@ -62,3 +62,6 @@ build/
 
 # Custom scripts
 copyRepo.sh
+
+# Vim specific
+*.swp
