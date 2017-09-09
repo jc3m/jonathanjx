@@ -2,33 +2,33 @@ const projects = [
   {
     name: 'Enrich',
     link: 'https://devpost.com/software/enrich',
-    image: 'enrich.jpg'
+    image: 'enrich.jpg',
   },
   {
     name: 'Itineratr',
     link: 'https://devpost.com/software/itenaratr',
-    image: 'itineratr.jpg'
+    image: 'itineratr.jpg',
   },
   {
     name: 'Cookie Jar',
     link: 'https://devpost.com/software/cookie-jar-y9mui3',
-    image: 'cookieJar.jpg'
+    image: 'cookieJar.jpg',
   },
   {
     name: 'Grapevine',
     link: 'http://grapevine.today/',
-    image: 'grapevine.png'
+    image: 'grapevine.png',
   },
   {
     name: 'RedC Robotics',
     link: 'https://redcrobotics.herokuapp.com/',
-    image: 'redcRobotics.png'
+    image: 'redcRobotics.png',
   },
   {
     name: 'ScavAR',
     link: 'https://devpost.com/software/scavar-vuhod1',
-    image: 'scavar.jpg'
-  }
+    image: 'scavar.jpg',
+  },
 ];
 
 export default projects;

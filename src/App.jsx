@@ -16,17 +16,17 @@ class App extends Component {
 
     // Can't put this on state since changing causes a re-render and will
     // deadlock if you switch pages.
-    this._visited = {
+    this.visited = {
       root: false,
       about: false,
-      portfolio: false
-    }
+      portfolio: false,
+    };
 
     this.setVisited = this.setVisited.bind(this);
   }
 
   setVisited(page) {
-    this._visited[page] = true;
+    this.visited[page] = true;
   }
 
   render() {
@@ -35,12 +35,28 @@ class App extends Component {
         <Navigation />
 
         <div className="main-view">
-          <Route exact path="/" component={
-            (props) => <Home visited={this._visited.root} visit={this.setVisited} /> } />
-          <Route path="/about" component={
-            (props) => <About visited={this._visited.about} visit={this.setVisited} /> } />
-          <Route path="/portfolio" component={
-            (props) => <Portfolio visited={this._visited.portfolio} visit={this.setVisited} /> }/>
+          <Route
+            exact
+            path="/"
+            component={() => (
+              <Home visited={this.visited.root} visit={this.setVisited} />
+            )}
+          />
+          <Route
+            path="/about"
+            component={() => (
+              <About visited={this.visited.about} visit={this.setVisited} />
+            )}
+          />
+          <Route
+            path="/portfolio"
+            component={() => (
+              <Portfolio
+                visited={this.visited.portfolio}
+                visit={this.setVisited}
+              />
+            )}
+          />
           <Route path="/m" component={Media} />
         </div>
       </div>
@@ -49,4 +65,3 @@ class App extends Component {
 }
 
 export default App;
-

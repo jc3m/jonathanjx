@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 
-import './Media.css'
+import './Media.css';
 
 class Media extends Component {
   constructor(props) {
     super(props);
     this.state = {
       docs: [],
-      prefix: ''
+      prefix: '',
     };
   }
 
   componentWillMount() {
-    fetch('/api/media').then((response) => {
-      return response.json();
-    }).then((json) => {
-      this.setState({
-        docs: json.docs,
-        prefix: json.s3Prefix
+    fetch('/api/media')
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({
+          docs: json.docs,
+          prefix: json.s3Prefix,
+        });
       });
-    });
   }
 
   render() {
     const types = {}; // Maps type to an array of links
     const sections = [];
 
+    // Organize docs by type
     this.state.docs.forEach((d) => {
       const ref = `http://${this.state.prefix}/${d.s3_key}`;
       if (types[d.type] === undefined) {
@@ -33,7 +34,7 @@ class Media extends Component {
       }
       types[d.type].push({
         name: d.name,
-        ref
+        ref,
       });
     });
 
@@ -42,10 +43,11 @@ class Media extends Component {
 
     typeKeys.forEach((k) => {
       types[k].sort((a, b) => {
-        if (a.name > b.name)
+        if (a.name > b.name) {
           return 1;
-        if (a.name < b.name)
+        } if (a.name < b.name) {
           return -1;
+        }
         return 0;
       });
 

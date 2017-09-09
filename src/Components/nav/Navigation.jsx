@@ -7,7 +7,7 @@ import './Navigation.css';
 const navLinks = [
   { title: 'Home', to: '/' },
   { title: 'About', to: '/about' },
-  { title: 'Portfolio', to: '/portfolio' }
+  { title: 'Portfolio', to: '/portfolio' },
 ];
 
 class Navigation extends Component {
@@ -19,25 +19,26 @@ class Navigation extends Component {
       opacity: {
         value: [0, 1],
         easing: 'easeInCubic',
-        delay: (el, i, l) => initialDelay + i * 100
+        delay: (el, i) => initialDelay + (i * 100),
       },
       translateY: {
         value: [-30, 0],
-        delay: (el, i, l) => initialDelay + i * 115,
-        easing: 'easeOutCubic'
-      }
+        delay: (el, i) => initialDelay + (i * 115),
+        easing: 'easeOutCubic',
+      },
     });
   }
 
   render() {
-    let items = [];
+    const items = [];
     navLinks.forEach((link) => {
-      const item = 
+      const item = (
         <li key={link.to}>
           <NavLink exact={link.to === '/'} to={link.to}>
             {link.title}
           </NavLink>
-        </li>;
+        </li>
+      );
       items.push(item);
     });
 

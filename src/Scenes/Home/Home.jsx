@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import anime from 'animejs';
 
 import './Home.css';
-import letters from './Letters.js';
+import letters from './Letters';
 
 class Home extends Component {
   componentDidMount() {
-    if (this.props.visited)
+    if (this.props.visited) {
       // Prevent re-animating
       return;
+    }
 
     const timeline = anime.timeline({
       loop: false,
-      autoplay: true
+      autoplay: true,
     });
 
     timeline
@@ -21,14 +23,14 @@ class Home extends Component {
         delay: 500,
         duration: 1000,
         color: ['#fff', '#000'],
-        easing: 'easeOutCubic'
+        easing: 'easeOutCubic',
       })
       .add({
         targets: '#intro-cont',
         delay: 100,
         duration: 1200,
         color: ['#fff', '#000'],
-        easing: 'easeOutCubic'
+        easing: 'easeOutCubic',
       })
       .add({
         targets: '.fill.in',
@@ -36,16 +38,16 @@ class Home extends Component {
         strokeDashoffset: {
           value: [anime.setDashoffset, 0],
           duration: 900,
-          delay: function(el, i, t) { return 0 + ( i * 140 ); },
-          easing: 'easeOutQuart'
-        }
+          delay: (el, i) => i * 140,
+          easing: 'easeOutQuart',
+        },
       })
       .add({
         targets: '.follow-item',
         duration: 1200,
-        delay: (el, i, t) => i * 900,
+        delay: (el, i) => i * 900,
         color: ['#fff', '#000'],
-        easing: 'easeOutCubic'
+        easing: 'easeOutCubic',
       })
       .add({});
   }
@@ -55,10 +57,13 @@ class Home extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="home">
         <div className="intro">
-          <h1><span id="intro-hi">Hi, </span><span id="intro-cont"> I'm</span></h1>
+          <h1>
+            <span id="intro-hi">Hi, </span>
+            <span id="intro-cont"> I&#39;m</span>
+          </h1>
         </div>
         <div className="letters">
           {letters}
@@ -75,5 +80,10 @@ class Home extends Component {
     );
   }
 }
+
+Home.propTypes = {
+  visited: PropTypes.bool.isRequired,
+  visit: PropTypes.func.isRequired,
+};
 
 export default Home;

@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import anime from 'animejs';
 
 import Favorites from './Favorites';
 import './About.css';
 import me from '../../me';
+import Resume from './JonathanXu-Resume.pdf';
 
 class About extends Component {
   componentDidMount() {
     if (this.props.visited) {
       anime({
         targets: '.about-wrapper',
-        opacity: [0,1],
+        opacity: [0, 1],
         duration: 800,
         delay: 0,
-        easing: 'easeInOutQuad'
+        easing: 'easeInOutQuad',
       });
-    }
-    else {
+    } else {
       anime({
         targets: '.about-wrapper',
-        opacity: [0,1],
+        opacity: [0, 1],
         duration: 900,
         delay: 200,
-        easing: 'easeOutQuad'
+        easing: 'easeOutQuad',
       });
     }
   }
@@ -33,11 +34,12 @@ class About extends Component {
 
   render() {
     const work = [];
-    me.work.forEach(function(w) {
+    me.work.forEach((w) => {
       work.push(
         <li key={w.company}>
           <p>
-            <a href={w.link} target="_blank" rel="noopener noreferrer">{ w.company }</a>, { w.position } ({ w.when })
+            <a href={w.link} target="_blank" rel="noopener noreferrer">{ w.company }</a>,&nbsp;
+            { w.position } ({ w.when })
           </p>
         </li>
       );
@@ -46,11 +48,12 @@ class About extends Component {
     const connect = [];
     me.social.forEach((s) => {
       const faClass = `fa fa-${s.fa}`;
+      const platform = `${s.platform} `;
       connect.push(
         <li key={s.platform}>
           <p>
-            <i className={faClass} aria-hidden="true" style={{ width: '24px' }}></i> 
-            <a href={s.link} target="_blank" rel="noopener noreferrer">{s.platform + ' '}</a>
+            <i className={faClass} aria-hidden="true" style={{ width: '24px' }} />
+            <a href={s.link} target="_blank" rel="noopener noreferrer">{platform}</a>
           </p>
         </li>
       );
@@ -58,17 +61,19 @@ class About extends Component {
 
     // Resume
     connect.push(
-      <li key='resume'>
+      <li key="resume">
         <p>
-            <i className={`fa fa-file-text`} aria-hidden="true" style={{ width: '24px' }}></i> 
-            <a href={require('./JonathanXu-Resume.pdf')}
-              target="_blank"
-              rel="noopener noreferrer">{'Resume '}</a>
-          </p>
+          <i className={`fa fa-file-text`} aria-hidden="true" style={{ width: '24px' }} />
+          <a
+            href={Resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >{'Resume '}</a>
+        </p>
       </li>
     );
 
-    return(
+    return (
       <div className="about-wrapper container">
         <div className="about-header">
           <h1>A little about me...</h1>
@@ -105,5 +110,10 @@ class About extends Component {
     );
   }
 }
+
+About.propTypes = {
+  visited: PropTypes.bool.isRequired,
+  visit: PropTypes.func.isRequired,
+};
 
 export default About;

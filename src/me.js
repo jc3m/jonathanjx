@@ -5,20 +5,20 @@ const me = {
       platform: 'Github',
       handle: 'jc3m',
       link: 'https://github.com/jc3m',
-      fa: 'github'
+      fa: 'github',
     },
     {
       platform: 'LinkedIn',
       handle: 'jonathanjxu',
       link: 'https://www.linkedin.com/in/jonathanjxu/',
-      fa: 'linkedin'
+      fa: 'linkedin',
     },
     {
       platform: 'jonathanj.xu97@gmail.com',
       handle: '',
       link: 'mailto:jonathanj.xu97@gmail.com',
-      fa: 'envelope-o'
-    }
+      fa: 'envelope-o',
+    },
   ],
   about: 'I\'m Jonathan Xu, an undergraduate at the University of Illinois at ' +
           'Urbana-Champaign studying Computer Engineering. I love learning about ' +
@@ -32,23 +32,23 @@ const me = {
       link: 'https://www.mongodb.com/',
       position: 'Software Engineering Intern',
       where: 'New York, NY',
-      when: 'May 2017 - Aug 2017'
+      when: 'May 2017 - Aug 2017',
     },
     {
       company: 'Caterpillar',
       link: 'http://www.caterpillar.com/',
       position: 'Web Development Intern',
       where: 'Champaign, IL',
-      when: 'Jan 2017 - May 2017'
+      when: 'Jan 2017 - May 2017',
     },
     {
       company: 'CEB',
       link: 'https://www.cebglobal.com/',
       position: 'Software Engineering Intern',
       where: 'Champaign, IL',
-      when: 'Oct 2015 - Dec 2016'
-    }
-  ]
-}
+      when: 'Oct 2015 - Dec 2016',
+    },
+  ],
+};
 
 export default me;
