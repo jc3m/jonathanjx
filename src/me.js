@@ -29,6 +29,13 @@ const me = {
     'and going to the gym.',
   work: [
     {
+      company: 'Facebook',
+      link: 'https://www.syngenta.com/',
+      position: 'Software Engineering Intern',
+      where: 'Menlo Park, CA',
+      when: 'May 2018 - August 2018',
+    },
+    {
       company: 'Syngenta',
       link: 'https://www.syngenta.com/',
       position: 'Frontend Engineering Intern',
