@@ -30,7 +30,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+
     "lint": "node ./node_modules/eslint/bin/eslint.js .",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+
     "precommit": "lint-staged"
   },
   "lint-staged": {

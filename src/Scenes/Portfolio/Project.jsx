@@ -18,13 +18,13 @@ class Project extends Component {
       {
         top: '0px',
       },
-      320
+      320,
     );
     $('.visitButton', e.currentTarget).animate(
       {
         top: '0px',
       },
-      320
+      320,
     );
   }
 
@@ -38,13 +38,13 @@ class Project extends Component {
       {
         top: HEADER_OFFSET,
       },
-      320
+      320,
     );
     $('.visitButton', e.currentTarget).animate(
       {
         top: BUTTON_OFFSET,
       },
-      320
+      320,
     );
   }
 

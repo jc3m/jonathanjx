@@ -20,13 +20,21 @@ const me = {
       fa: 'envelope-o',
     },
   ],
-  about: 'I\'m Jonathan Xu, an undergraduate at the University of Illinois at ' +
-          'Urbana-Champaign studying Computer Engineering. I love learning about ' +
-          'and exploring everything there is to know about computers whether it\'s ' +
-          'logic gates and transistors or developing web applications. Besides ' +
-          'coding, I enjoy playing the guitar, listening to amazing music, ' +
-          'and going to the gym.',
+  about:
+    "I'm Jonathan Xu, an undergraduate at the University of Illinois at " +
+    'Urbana-Champaign studying Computer Engineering. I love learning about ' +
+    "and exploring everything there is to know about computers whether it's " +
+    'logic gates and transistors or developing web applications. Besides ' +
+    'coding, I enjoy playing the guitar, listening to amazing music, ' +
+    'and going to the gym.',
   work: [
+    {
+      company: 'Syngenta',
+      link: 'https://www.syngenta.com/',
+      position: 'Frontend Engineering Intern',
+      where: 'Champaign, IL',
+      when: 'Aug 2017 - May 2018',
+    },
     {
       company: 'MongoDB',
       link: 'https://www.mongodb.com/',

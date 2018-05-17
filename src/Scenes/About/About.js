@@ -43,7 +43,7 @@ class About extends Component {
             </a>,&nbsp;
             {w.position} ({w.when})
           </p>
-        </li>
+        </li>,
       );
     });
 
@@ -59,7 +59,7 @@ class About extends Component {
               {platform}
             </a>
           </p>
-        </li>
+        </li>,
       );
     });
 
@@ -72,7 +72,7 @@ class About extends Component {
             {'Resume '}
           </a>
         </p>
-      </li>
+      </li>,
     );
 
     return (

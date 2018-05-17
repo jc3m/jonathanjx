@@ -84,7 +84,7 @@ letters.forEach((l, i) => {
           {paths}
         </g>
       </svg>
-    </div>
+    </div>,
   );
 });
 
