@@ -1,5 +1,16 @@
 language: node_js
 node_js:
-  - "node"
+- node
 git:
   depth: false
+script:
+- npm run test
+- npm run build
+deploy:
+  skip_cleanup: true
+  provider: s3
+  access_key_id: AKIAIK6KJPUOBDMYHD6A
+  secret_access_key:
+    secure: rEL513KBLh9U4PzRFcMEJ04v7G6Wtd/KGkTqWsV6uyA74AXbnzfLt/HPQ780cIUTt82ysllFDn+12wTsW1Ab1u2Upu7i87gholngQDyYucA6Z0cd6TMGypxUoKdL9B834AgnHw/Lvv7i91MgsSRElWPVJ5fXyahU7ZLISwQiyUjGeBIGamOmuhatTPAHmLcpSTq7gaA6zqSW9Nt9ESw9i1G+IhUv/D4yro4MrLIcb0w3vM6b7074CI9KZDk3DY7CpV4PTfJgKPv5ywmvLZxp/62DcUzu7fFSMruHdGi9O745T13622bpToGv4p+mkEDeprHZVaDOSGxcHGdt28IR8pRO9/VMC6Mxn/u99RkkQcUgylQD2q9FPdiUgv9DOj4zbm1r/+K3Qbwh42pkL7Qf6jY1J0lMb3tnGhXSCqqAdDZoJdH7npiK1zXMsdHWQKbcq2k0CI7oiVeRlolrYQioDGtB8COLu3PmwUWwROVxsbj8s89f1MuHOUDqweOApbW34Y6rWri6ec0sf9MTLlCeSxzmJPQFNkB3IB4MLaxm4nMLPIFsGhpOAueyzOY7zZbL4TTPSZfX6hJc2JUsgbjMe5dsPWRadmOHK72c5A+Oj48MUEDyJjH5q/ApaBXy9iEb1X/EeVch+ysMxkIGnXs8hEiBbrjNDqaJQg+ejXW0miE=
+  bucket: jonathanjx
+  local_dir: build
