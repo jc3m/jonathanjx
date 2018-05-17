@@ -34,26 +34,30 @@ class About extends Component {
 
   render() {
     const work = [];
-    me.work.forEach((w) => {
+    me.work.forEach(w => {
       work.push(
         <li key={w.company}>
           <p>
-            <a href={w.link} target="_blank" rel="noopener noreferrer">{ w.company }</a>,&nbsp;
-            { w.position } ({ w.when })
+            <a href={w.link} target="_blank" rel="noopener noreferrer">
+              {w.company}
+            </a>,&nbsp;
+            {w.position} ({w.when})
           </p>
         </li>
       );
     });
 
     const connect = [];
-    me.social.forEach((s) => {
+    me.social.forEach(s => {
       const faClass = `fa fa-${s.fa}`;
       const platform = `${s.platform} `;
       connect.push(
         <li key={s.platform}>
           <p>
             <i className={faClass} aria-hidden="true" style={{ width: '24px' }} />
-            <a href={s.link} target="_blank" rel="noopener noreferrer">{platform}</a>
+            <a href={s.link} target="_blank" rel="noopener noreferrer">
+              {platform}
+            </a>
           </p>
         </li>
       );
@@ -64,11 +68,9 @@ class About extends Component {
       <li key="resume">
         <p>
           <i className={`fa fa-file-text`} aria-hidden="true" style={{ width: '24px' }} />
-          <a
-            href={Resume}
-            target="_blank"
-            rel="noopener noreferrer"
-          >{'Resume '}</a>
+          <a href={Resume} target="_blank" rel="noopener noreferrer">
+            {'Resume '}
+          </a>
         </p>
       </li>
     );
@@ -82,23 +84,17 @@ class About extends Component {
         <div className="about-body">
           <div className="about-col-left">
             <div className="about-intro">
-              <p>
-                { me.about }
-              </p>
+              <p>{me.about}</p>
             </div>
 
             <div className="about-work">
               <h3>Work Experience</h3>
-              <ul>
-                { work }
-              </ul>
+              <ul>{work}</ul>
             </div>
 
             <div className="about-connect">
               <h3>Connect</h3>
-              <ul>
-                { connect }
-              </ul>
+              <ul>{connect}</ul>
             </div>
           </div>
 

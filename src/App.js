@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 
@@ -31,35 +31,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navigation />
+      <HashRouter>
+        <div className="App">
+          <Navigation />
 
-        <div className="main-view">
-          <Route
-            exact
-            path="/"
-            component={() => (
-              <Home visited={this.visited.root} visit={this.setVisited} />
-            )}
-          />
-          <Route
-            path="/about"
-            component={() => (
-              <About visited={this.visited.about} visit={this.setVisited} />
-            )}
-          />
-          <Route
-            path="/portfolio"
-            component={() => (
-              <Portfolio
-                visited={this.visited.portfolio}
-                visit={this.setVisited}
-              />
-            )}
-          />
-          <Route path="/m" component={Media} />
+          <div className="main-view">
+            <Route exact path="/" component={() => <Home visited={this.visited.root} visit={this.setVisited} />} />
+            <Route path="/about" component={() => <About visited={this.visited.about} visit={this.setVisited} />} />
+            <Route
+              path="/portfolio"
+              component={() => <Portfolio visited={this.visited.portfolio} visit={this.setVisited} />}
+            />
+            <Route path="/m" component={Media} />
+          </div>
         </div>
-      </div>
+      </HashRouter>
     );
   }
 }

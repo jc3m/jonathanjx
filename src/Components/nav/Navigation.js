@@ -19,11 +19,11 @@ class Navigation extends Component {
       opacity: {
         value: [0, 1],
         easing: 'easeInCubic',
-        delay: (el, i) => initialDelay + (i * 100),
+        delay: (el, i) => initialDelay + i * 100,
       },
       translateY: {
         value: [-30, 0],
-        delay: (el, i) => initialDelay + (i * 115),
+        delay: (el, i) => initialDelay + i * 115,
         easing: 'easeOutCubic',
       },
     });
@@ -31,7 +31,7 @@ class Navigation extends Component {
 
   render() {
     const items = [];
-    navLinks.forEach((link) => {
+    navLinks.forEach(link => {
       const item = (
         <li key={link.to}>
           <NavLink exact={link.to === '/'} to={link.to}>
@@ -44,9 +44,7 @@ class Navigation extends Component {
 
     return (
       <nav className="navbar">
-        <ul>
-          {items}
-        </ul>
+        <ul>{items}</ul>
       </nav>
     );
   }

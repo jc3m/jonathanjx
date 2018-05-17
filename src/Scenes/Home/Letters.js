@@ -1,15 +1,6 @@
 import React from 'react';
 
-const colors = [
-  '#00d4ff',
-  '#0af',
-  '#007fff',
-  '#05f',
-  '#50f',
-  '#7f00ff',
-  '#a0f',
-  '#d400ff',
-];
+const colors = ['#00d4ff', '#0af', '#007fff', '#05f', '#50f', '#7f00ff', '#a0f', '#d400ff'];
 
 const letters = [
   {

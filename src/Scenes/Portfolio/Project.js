@@ -14,12 +14,18 @@ class Project extends Component {
     $('.visitButton', e.currentTarget).stop(true);
 
     $('.item-in', e.currentTarget).fadeTo(300, 1.0);
-    $('h3', e.currentTarget).animate({
-      top: '0px',
-    }, 320);
-    $('.visitButton', e.currentTarget).animate({
-      top: '0px',
-    }, 320);
+    $('h3', e.currentTarget).animate(
+      {
+        top: '0px',
+      },
+      320
+    );
+    $('.visitButton', e.currentTarget).animate(
+      {
+        top: '0px',
+      },
+      320
+    );
   }
 
   imageLeave(e) {
@@ -28,12 +34,18 @@ class Project extends Component {
     $('.visitButton', e.currentTarget).stop(true);
 
     $('.item-in', e.currentTarget).fadeTo(300, 0.0);
-    $('h3', e.currentTarget).animate({
-      top: HEADER_OFFSET,
-    }, 320);
-    $('.visitButton', e.currentTarget).animate({
-      top: BUTTON_OFFSET,
-    }, 320);
+    $('h3', e.currentTarget).animate(
+      {
+        top: HEADER_OFFSET,
+      },
+      320
+    );
+    $('.visitButton', e.currentTarget).animate(
+      {
+        top: BUTTON_OFFSET,
+      },
+      320
+    );
   }
 
   render() {
@@ -81,23 +93,16 @@ class Project extends Component {
     };
 
     return (
-      <div style={projectStyle}
-        onMouseEnter={this.imageEnter}
-        onMouseLeave={this.imageLeave}>
+      <div style={projectStyle} onMouseEnter={this.imageEnter} onMouseLeave={this.imageLeave}>
         <div>
-          <img
-            style={imgStyle}
-            src={require(`./images/${this.props.image}`)}
-            alt={this.props.name}
-          />
+          <img style={imgStyle} src={require(`./images/${this.props.image}`)} alt={this.props.name} />
         </div>
         <div className="item-in" style={overlayStyle}>
           <h3 style={nameStyle}>{this.props.name}</h3>
           <div className="visitButton" style={buttonStyle}>
-            <a href={this.props.link}
-              style={linkStyle}
-              target="_blank"
-              rel="noopener noreferrer">Visit</a>
+            <a href={this.props.link} style={linkStyle} target="_blank" rel="noopener noreferrer">
+              Visit
+            </a>
           </div>
         </div>
       </div>

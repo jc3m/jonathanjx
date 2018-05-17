@@ -65,9 +65,7 @@ class Home extends Component {
             <span id="intro-cont"> I&#39;m</span>
           </h1>
         </div>
-        <div className="letters">
-          {letters}
-        </div>
+        <div className="letters">{letters}</div>
 
         <div className="follow">
           <h1>

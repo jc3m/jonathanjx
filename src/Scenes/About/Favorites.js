@@ -44,7 +44,8 @@ class Favorites extends Component {
         const comma = j === favs[key].length - 1 ? '' : ', ';
         const value = (
           <span key={val}>
-            <span style={s}>&quot;{val}&quot;</span>{comma}
+            <span style={s}>&quot;{val}&quot;</span>
+            {comma}
           </span>
         );
         values.push(value);
@@ -62,7 +63,9 @@ class Favorites extends Component {
 
     const favorites = (
       <div className="favorites" style={f}>
-        <p><span style={d}>let</span> favorites <span style={e}>=</span> {'{'} </p>
+        <p>
+          <span style={d}>let</span> favorites <span style={e}>=</span> {'{'}{' '}
+        </p>
         <div id="kv-block" style={{ marginLeft: '1.8em', whiteSpace: 'normal' }}>
           {keys}
         </div>
