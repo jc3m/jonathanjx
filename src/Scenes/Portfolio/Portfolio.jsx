@@ -12,8 +12,7 @@ class Portfolio extends Component {
   render() {
     const projectViews = [];
     projects.forEach(p => {
-      const project = <Project image={p.image} name={p.name} link={p.link} key={p.name} />;
-      projectViews.push(project);
+      projectViews.push(<Project image={p.image} name={p.name} link={p.link} key={p.name} />);
     });
 
     return (

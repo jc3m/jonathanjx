@@ -95,7 +95,11 @@ class Project extends Component {
     return (
       <div style={projectStyle} onMouseEnter={this.imageEnter} onMouseLeave={this.imageLeave}>
         <div>
-          <img style={imgStyle} src={require(`./images/${this.props.image}`)} alt={this.props.name} />
+          <img
+            style={imgStyle}
+            src={require(`./images/${this.props.image}`)}
+            alt={this.props.name}
+          />
         </div>
         <div className="item-in" style={overlayStyle}>
           <h3 style={nameStyle}>{this.props.name}</h3>

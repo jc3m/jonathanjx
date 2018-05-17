@@ -19,11 +19,11 @@ class Navigation extends Component {
       opacity: {
         value: [0, 1],
         easing: 'easeInCubic',
-        delay: (el, i) => initialDelay + i * 100,
+        delay: (el, i) => initialDelay + (i * 100),
       },
       translateY: {
         value: [-30, 0],
-        delay: (el, i) => initialDelay + i * 115,
+        delay: (el, i) => initialDelay + (i * 115),
         easing: 'easeOutCubic',
       },
     });

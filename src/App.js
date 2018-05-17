@@ -36,11 +36,20 @@ class App extends Component {
           <Navigation />
 
           <div className="main-view">
-            <Route exact path="/" component={() => <Home visited={this.visited.root} visit={this.setVisited} />} />
-            <Route path="/about" component={() => <About visited={this.visited.about} visit={this.setVisited} />} />
+            <Route
+              exact
+              path="/"
+              component={() => <Home visited={this.visited.root} visit={this.setVisited} />}
+            />
+            <Route
+              path="/about"
+              component={() => <About visited={this.visited.about} visit={this.setVisited} />}
+            />
             <Route
               path="/portfolio"
-              component={() => <Portfolio visited={this.visited.portfolio} visit={this.setVisited} />}
+              component={() => (
+                <Portfolio visited={this.visited.portfolio} visit={this.setVisited} />
+              )}
             />
             <Route path="/m" component={Media} />
           </div>

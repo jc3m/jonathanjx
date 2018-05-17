@@ -67,7 +67,7 @@ class About extends Component {
     connect.push(
       <li key="resume">
         <p>
-          <i className={`fa fa-file-text`} aria-hidden="true" style={{ width: '24px' }} />
+          <i className="fa fa-file-text" aria-hidden="true" style={{ width: '24px' }} />
           <a href={Resume} target="_blank" rel="noopener noreferrer">
             {'Resume '}
           </a>
