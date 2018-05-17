@@ -63,5 +63,6 @@ build/
 # Custom scripts
 copyRepo.sh
 
-# Vim specific
+# Machine Specific
 *.swp
+.DS_Store
