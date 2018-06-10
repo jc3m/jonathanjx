@@ -30,7 +30,7 @@ const me = {
   work: [
     {
       company: 'Facebook',
-      link: 'https://www.syngenta.com/',
+      link: 'https://www.facebook.com/',
       position: 'Software Engineering Intern',
       where: 'Menlo Park, CA',
       when: 'May 2018 - August 2018',
@@ -52,7 +52,7 @@ const me = {
     {
       company: 'Caterpillar',
       link: 'http://www.caterpillar.com/',
-      position: 'Web Development Intern',
+      position: 'Frontend Engineering Intern',
       where: 'Champaign, IL',
       when: 'Jan 2017 - May 2017',
     },
