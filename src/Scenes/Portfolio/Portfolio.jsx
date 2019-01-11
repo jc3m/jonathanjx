@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Project from './Project';
+import Project from './components/Project';
 import projects from './projectList';
 
 class Portfolio extends Component {

@@ -2,32 +2,32 @@ const projects = [
   {
     name: 'Enrich',
     link: 'https://devpost.com/software/enrich',
-    image: 'enrich.jpg',
+    image: require('./images/enrich.jpg'),
   },
   {
     name: 'Itineratr',
     link: 'https://devpost.com/software/itenaratr',
-    image: 'itineratr.jpg',
+    image: require('./images/itineratr.jpg'),
   },
   {
     name: 'Cookie Jar',
     link: 'https://devpost.com/software/cookie-jar-y9mui3',
-    image: 'cookieJar.jpg',
+    image: require('./images/cookieJar.jpg'),
   },
   {
     name: 'Grapevine',
     link: 'http://grapevine.today/',
-    image: 'grapevine.png',
+    image: require('./images/grapevine.png'),
   },
   {
     name: 'RedC Robotics',
     link: 'https://redcrobotics.herokuapp.com/',
-    image: 'redcRobotics.png',
+    image: require('./images/redcRobotics.png'),
   },
   {
     name: 'ScavAR',
     link: 'https://devpost.com/software/scavar-vuhod1',
-    image: 'scavar.jpg',
+    image: require('./images/scavar.jpg'),
   },
 ];
 
