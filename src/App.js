@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
+import './styles/base.scss';
 
 import Navigation from './Components/nav/Navigation';
 import Home from './Scenes/Home';
 import About from './Scenes/About/About';
 import Portfolio from './Scenes/Portfolio/Portfolio';
-import './styles/base.scss';
 
 class App extends Component {
   constructor(props) {
