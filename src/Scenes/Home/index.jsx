@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 
-import './Home.css';
+import './styles.scss';
 import letters from './Letters';
 
 class Home extends Component {
@@ -62,7 +62,7 @@ class Home extends Component {
         <div className="intro">
           <h1>
             <span id="intro-hi">Hi, </span>
-            <span id="intro-cont"> I&#39;m</span>
+            <span id="intro-cont"> I&apos;m</span>
           </h1>
         </div>
         <div className="letters">{letters}</div>

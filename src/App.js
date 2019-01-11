@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { HashRouter, Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 
 import Navigation from './Components/nav/Navigation';
-import Home from './Scenes/Home/Home';
+import Home from './Scenes/Home';
 import About from './Scenes/About/About';
 import Portfolio from './Scenes/Portfolio/Portfolio';
-import Media from './Scenes/Media';
-import './App.css';
+import './styles/base.scss';
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <div className="App">
           <Navigation />
 
@@ -51,10 +49,9 @@ class App extends Component {
                 <Portfolio visited={this.visited.portfolio} visit={this.setVisited} />
               )}
             />
-            <Route path="/m" component={Media} />
           </div>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }

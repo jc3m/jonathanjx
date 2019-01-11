@@ -29,6 +29,13 @@ const me = {
     'and going to the gym.',
   work: [
     {
+      company: 'Google',
+      link: 'https://www.google.com/',
+      position: 'Software Engineer',
+      where: 'Chicago, IL',
+      when: 'September 2019 - Present',
+    },
+    {
       company: 'Facebook',
       link: 'https://www.facebook.com/',
       position: 'Software Engineering Intern',
