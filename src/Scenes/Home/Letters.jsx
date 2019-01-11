@@ -62,12 +62,17 @@ const letters = [
 ];
 
 const letterComponents = [];
+let SCALE_FACTOR = 1;
+
+if (window.screen.width < 880) {
+  SCALE_FACTOR = 880 / window.screen.width;
+}
 
 letters.forEach((l, i) => {
   const style = {
-    width: l.width,
-    height: l.height,
-    marginLeft: -1 * l.overlap,
+    width: l.width / SCALE_FACTOR,
+    height: l.height / SCALE_FACTOR,
+    marginLeft: -1 * l.overlap / SCALE_FACTOR,
   };
 
   const paths = [];

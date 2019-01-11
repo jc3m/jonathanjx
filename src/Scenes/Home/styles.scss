@@ -11,6 +11,10 @@
 		font-size: 2.5rem;
 		font-weight: 400;
 		margin: 10px 0;
+
+		@media (max-width: 570px) {
+			font-size: 1.8rem;
+		}
 	}
 
 	.letters {
@@ -21,6 +25,6 @@
 	}
 
 	.follow {
-		margin-top: 25px;
+		margin: 25px 20px 0 20px;
 	}
 }
