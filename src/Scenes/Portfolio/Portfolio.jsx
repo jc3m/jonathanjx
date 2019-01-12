@@ -16,7 +16,7 @@ class Portfolio extends Component {
     });
 
     return (
-      <div className="portfolio-wrapper" style={{ marginTop: 70 }}>
+      <div className="portfolio-wrapper" style={{ marginTop: 20, marginBottom: 60 }}>
         {projectViews}
       </div>
     );

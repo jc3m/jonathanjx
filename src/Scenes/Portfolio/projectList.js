@@ -1,5 +1,15 @@
 const projects = [
   {
+    name: 'HackIllinois 2019',
+    link: 'https://2019.hackillinois.org',
+    image: require('./images/hackIL.png'),
+  },
+  {
+    name: 'Enginering Open House',
+    link: 'https://eohillinois.org',
+    image: require('./images/eoh.png'),
+  },
+  {
     name: 'Enrich',
     link: 'https://devpost.com/software/enrich',
     image: require('./images/enrich.jpg'),
