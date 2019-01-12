@@ -5,15 +5,10 @@ import Project from './components/Project';
 import projects from './projectList';
 
 class Portfolio extends Component {
-  componentWillUnmount() {
-    this.props.visit('portfolio');
-  }
-
   render() {
-    const projectViews = [];
-    projects.forEach(p => {
-      projectViews.push(<Project image={p.image} name={p.name} link={p.link} key={p.name} />);
-    });
+    const projectViews = projects.map(p => (
+      <Project image={p.image} name={p.name} link={p.link} key={p.name} />
+    ));
 
     return (
       <div className="portfolio-wrapper" style={{ marginTop: 20, marginBottom: 60 }}>

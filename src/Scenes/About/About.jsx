@@ -9,27 +9,13 @@ import Resume from './JonathanXu-Resume.pdf';
 
 class About extends Component {
   componentDidMount() {
-    if (this.props.visited) {
-      anime({
-        targets: '.about-wrapper',
-        opacity: [0, 1],
-        duration: 800,
-        delay: 0,
-        easing: 'easeInOutQuad',
-      });
-    } else {
-      anime({
-        targets: '.about-wrapper',
-        opacity: [0, 1],
-        duration: 900,
-        delay: 200,
-        easing: 'easeOutQuad',
-      });
-    }
-  }
-
-  componentWillUnmount() {
-    this.props.visit('root');
+    anime({
+      targets: '.about-wrapper',
+      opacity: [0, 1],
+      duration: 900,
+      delay: 200,
+      easing: 'easeOutQuad',
+    });
   }
 
   render() {

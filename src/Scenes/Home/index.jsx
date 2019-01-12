@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import anime from 'animejs';
 
+import { visitRoot } from '../../services/visited/actions';
 import './styles.scss';
 import letters from './Letters';
 
@@ -11,6 +13,8 @@ class Home extends Component {
       // Prevent re-animating
       return;
     }
+
+    this.props.visit();
 
     const timeline = anime.timeline({
       loop: false,
@@ -52,10 +56,6 @@ class Home extends Component {
       .add({});
   }
 
-  componentWillUnmount() {
-    this.props.visit('root');
-  }
-
   render() {
     return (
       <div className="home">
@@ -84,4 +84,12 @@ Home.propTypes = {
   visit: PropTypes.func.isRequired,
 };
 
-export default Home;
+const mapStateToProps = state => ({
+  visited: state.visited.root,
+});
+
+const mapDispatchToProps = dispatch => ({
+  visit: () => dispatch(visitRoot()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
